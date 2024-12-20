@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+
+body{
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+td {
+    border: 1px solid black;
+    padding: 15px;
+    min-width: 51px;
+    text-align: center;
+    background-color: #ffffff;
+    font-family: 'Silkscreen';
+}
+
+table {
+    margin: 15px;
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin: 5px;
+    display: inline-block;
+}
+
+input {
+    margin-inline: 5px;
+}
+
+button {
+    margin-inline: 5px;
+    width: 140px;
+}
+
+
+#shadowBox {
+    background-color: rgba(255, 255, 255, 0.0);
+}
+
+.rainbow {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 50px;
+    font-family: 'Silkscreen';
+    letter-spacing: 5px;
+}
+.rainbow_text_animated {
+    background: linear-gradient(to right,  #0F9D58 , #F4B400 , #4285F4 , #DB4437);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow_animation 6s ease-in-out infinite;
+    background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+    0%,100% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+}
