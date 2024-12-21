@@ -51,6 +51,14 @@ function createAnswerForm() {
         existingForm.remove();
     }
 
+    const existingFormContainer = document.querySelector("#formContainer");
+    if (existingFormContainer) {
+        existingFormContainer.remove();
+    }
+
+    const formContainer = document.createElement("div");
+    formContainer.id = "formContainer"
+
     const form = document.createElement("form")
     form.id = "teamResponse"
 
@@ -91,7 +99,8 @@ function createAnswerForm() {
     });
 
     form.appendChild(submitButton);
-    document.body.appendChild(form);
+    formContainer.appendChild(form);
+    document.body.appendChild(formContainer);
 }
 
 
@@ -123,8 +132,7 @@ function createScoreForm() {
 
 
     // Collect Scores
-    form.addEventListener("submit", (e) => {
-         e.preventDefault();
+    form.addEventListener("submit", () => {
         var scores = [];
         for (let i = 0; i < teamNamesList.length; i++) {
             const score = document.getElementById(`${teamNamesList[i]}-score`).value;
