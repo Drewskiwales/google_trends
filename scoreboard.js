@@ -134,6 +134,7 @@ function createScoreForm() {
     // Collect Scores
     form.addEventListener("submit", (e) => {
         e.preventDefault();
+        var scores = [];
         for (let i = 0; i < teamNamesList.length; i++) {
             const score = document.getElementById(`${teamNamesList[i]}-score`).value;
             scores.push(score);
