@@ -3,6 +3,23 @@
 body{
     background-color: #f1f1f1;
     text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+p {
+    padding: 15px;
+    min-width: 51px;
+    text-align: center;
+}
+
+li {
+    text-align: left;
+    padding: 7px;
+    line-height: 25px;
+}
+
+h2 {
+    font-family: 'Silkscreen';
 }
 
 td {
