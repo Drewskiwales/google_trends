@@ -40,6 +40,24 @@ function tableCreate() {
             }
         }
     }
+    // Seperate 
+    if (scoreTable.length > 1) {
+        const tr = tbl.insertRow();
+
+        const td = tr.insertCell();
+        td.appendChild(document.createTextNode(`Total`));
+        td.style.backgroundColor = "#f1f1f1";
+
+        for (let i = 0; i < teamNamesList.length; i ++){
+            const td = tr.insertCell();
+            var teamSum = 0;
+            for (let j = 0; j < scoreTable.length; j ++){
+                teamSum += parseInt(scoreTable[j][i]);
+            }
+
+            td.appendChild(document.createTextNode(teamSum));
+        }
+    }
     body.appendChild(tbl);
 }
 
@@ -159,6 +177,7 @@ document.getElementById("teamForm").addEventListener("submit", (e) => {
     const name = document.getElementById("teamName").value;
     teamNamesList.push(name);
     localStorage.setItem("teamNames", JSON.stringify(teamNamesList));
+    document.getElementById("teamForm").reset();
     tableCreate();
     createAnswerForm();
     createScoreForm();

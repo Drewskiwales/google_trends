@@ -49,7 +49,6 @@ button {
 }
 .rainbow_text_animated {
     background: linear-gradient(to right,  #0F9D58 , #F4B400 , #4285F4 , #DB4437);
-    -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     animation: rainbow_animation 6s ease-in-out infinite;
